@@ -28,7 +28,11 @@ namespace MVC5_Contoso.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+
+            Student student = db.Students
+                .Include(s => s.Enrollments.Select(c => c.Course))
+                .FirstOrDefault(s => s.StudentID == id);
+
             if (student == null)
             {
                 return HttpNotFound();
