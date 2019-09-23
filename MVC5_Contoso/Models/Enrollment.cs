@@ -18,7 +18,7 @@
         public Grades? Grade { get; set; }
 
         // A student enrolled on a course
-        public Course Course { get; set; }
-        public Student Student { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace MVC5_Contoso.Data
     {
         public UniversityContext() : base("UniversityConnection")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Student> Students { get; set; }
