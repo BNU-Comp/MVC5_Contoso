@@ -13,8 +13,11 @@
     public class Enrollment
     {
         public int EnrollmentID { get; set; }
+
         public int CourseID { get; set; }
+
         public int StudentID { get; set; }
+
         public Grades? Grade { get; set; }
 
         // A student enrolled on a course
